@@ -8,7 +8,6 @@ const authRoute = require("./routes/auth");
 const path = require("path");
 const connectDB = require("./mongodb/connect");
 dotenv.config();
- mongoose.set("strictQuery", true);
 app.use( cors() );
 app.use(express.json());
 app.get("/", (req, res) => {
