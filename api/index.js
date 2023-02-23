@@ -7,16 +7,20 @@ const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const path = require("path");
 dotenv.config();
-
+ mongoose.set("strictQuery", true);
 mongoose.connect(
   process.env.MONGO_URL,
-  { useNewUrlParser: true },
+  
   () => {
     console.log("Connected to MongoDB");
   }
 );
 app.use( cors() );
 app.use(express.json());
+app.get("/", (req, res) => {
+    res.send({ message: "Hello World!" });
+});
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.listen(8800, () => {
