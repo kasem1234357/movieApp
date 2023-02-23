@@ -6,15 +6,9 @@ const cors = require( 'cors' );
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const path = require("path");
+const connectDB = require("./mongodb/connect");
 dotenv.config();
  mongoose.set("strictQuery", true);
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true },
-  () => {
-    console.log("Connected to MongoDB");
-  }
-);
 app.use( cors() );
 app.use(express.json());
 app.get("/", (req, res) => {
@@ -23,6 +17,16 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
-app.listen(8800, () => {
- console.log("Backend server is running!");
-});
+const startServer = async () => {
+    try {
+        connectDB(process.env.MONGO_URL);
+
+        app.listen(8080, () =>
+            console.log("Server started on port http://localhost:8080"),
+        );
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+startServer();
