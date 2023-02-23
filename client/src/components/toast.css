@@ -1,0 +1,22 @@
+.toast-content{
+ --flow-space:0.5rem;
+}
+.toast-type{
+ padding: 5px 10px;
+ border-radius: 8px;
+ color: white;
+ display: inline-block;
+}
+.toast-update{
+ background: #ED6E7A;
+}
+.toast-account{
+ background: #4175DF;
+}
+.toast-security{
+ background: hsl(var(--clr-main));
+}
+
+.toast{
+ border-bottom: .7px solid rgb(95, 95, 95);
+}

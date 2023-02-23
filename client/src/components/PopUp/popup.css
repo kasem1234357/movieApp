@@ -1,0 +1,71 @@
+.popup-box{
+ width: 90%;
+ max-width: 450px;
+ margin: auto;
+ top: 15px;
+ left: 15px;
+ padding: 0 10px 10px 10px;
+ background: rgba(60, 60, 60, 0.3);
+ transform: scale(0);
+    backdrop-filter: blur( 4px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ position: fixed;
+ z-index: 1;
+ border-radius: 12px;
+ animation: animate 0.5s linear forwards;
+}
+.success{
+ box-shadow: inset 0 8px 32px 0 rgba(36, 135, 31, 0.37);
+}
+ h3{
+ 
+ font-weight: bold;
+ line-height: 10px;
+}
+.success h3{
+ color: #4cdd45;
+}
+.warning{
+ box-shadow: inset 0 8px 32px 0 rgba(135, 131, 31, 0.37);
+}
+.warning h3{
+ color: #cedd45;
+}
+.danger ,.error{
+ box-shadow: inset 0 8px 32px 0 rgba(135, 31, 31, 0.37);
+}
+.danger h3,.error h3{
+ color: #dd4545;
+}
+.desc{
+ color: white;
+}
+.success .icon{
+ background:#4cdd45 ;
+}
+.warning .icon{
+ background:#cedd45 ;
+}
+.error .icon,.danger .icon{
+ background:#dd4545 ;
+}
+.icon{
+ border-radius: 50%;
+ margin: 10px;
+ height: 25px;
+ width: 25px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+@keyframes animate{
+   from{
+    transform: scale(0);
+   }
+   to{
+    transform: scale(1);
+   }
+}

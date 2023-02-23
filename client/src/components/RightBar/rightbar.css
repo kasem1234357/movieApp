@@ -1,0 +1,50 @@
+.rightBarContainer{
+  max-width: 310px;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+}
+.account-detials h3{
+ line-height: 2;
+}
+.account-detials p{
+  font-size: 14px;
+}
+.account-detials h3{
+ line-height: 2;
+}
+.account{
+ gap: 1rem;
+}
+.filter-items{
+ --gap:0.8rem
+}
+.sign-btn{
+  background: #b31c25;
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    color: hsl(var(--clr-white));
+    padding: 10px 15px 10px 15px;
+    font-size: 16px;
+}
+.sign-btn span,.login-btn span{
+  padding-left: 5px;
+  color: #fff;
+}
+.login-btn span{
+  color: #c9ccd4;
+}
+.login-btn{
+  width: max-content;
+    background: #22262a;
+    border-radius: 25px;
+    margin-left: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 10px 15px;
+    font-size: 16px;
+}
